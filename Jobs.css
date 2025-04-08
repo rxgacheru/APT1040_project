@@ -1,0 +1,222 @@
+* {
+  box-sizing: border-box;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Andale Mono, monospace;
+}
+
+/* CSS FOR HEADER */
+#title {
+  text-align: center;
+  padding: 10px;
+  background-color: #1F7D53;
+  color: rgb(255, 255, 255);
+  font-family: Andale Mono, monospace;
+  animation:  5s ease-in-out;
+}
+#title p {
+  font-size: 1.5em;
+}
+
+/* CSS FOR NAVIGATION BAR */
+#nav {
+  background-color: #18230F;
+  padding: 10px;
+  font-size: 1.2em;
+  overflow: hidden;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+#nav > a {
+  text-decoration: none;
+  color: white;
+  padding: 5px 10px;
+}
+#nav a:hover {
+  color: #990011FF;
+  background-color: #FCF6F5FF;
+}
+
+/* CSS FOR BANNER IMAGE */
+#img-div {
+  background-image: url(free1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  text-align: center;
+  padding-bottom: 10px;
+  height: 600px;
+}
+figcaption {
+  font-size: 3em;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bolder;
+}
+#mainbutton {
+  padding: 10px;
+  font-size: 1.2em;
+  color: white;
+  background-color: #1F7D53;
+  border: 0px #1F7D53;
+  position: absolute;
+  top: 60%;
+  transform: translate(-50%);
+}
+
+/* CSS FOR INTRO SECTION */
+#intro {
+  text-align: center;
+  padding: 20px;
+  background-color: #F3F4F6;
+  color: #333;
+}
+
+/* CSS FOR JOB LISTINGS SECTION */
+#job-listings {
+  padding: 20px;
+  background-color: #FFF;
+}
+.job {
+  border: 1px solid #DDD;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #F9F9F9;
+}
+.job h4 {
+  margin: 0 0 5px 0;
+  color: #1F7D53;
+}
+.job p {
+  margin: 5px 0;
+  color: #666;
+}
+.job button {
+  padding: 10px;
+  font-size: 1em;
+  color: white;
+  background-color: #1F7D53;
+  border: 0;
+  cursor: pointer;
+}
+.job button:hover {
+  background-color: #155D3B;
+}
+
+/* CSS FOR ABOUT US SECTION */
+#about-us {
+  padding: 20px;
+  background-color: #EAF4E6;
+  color: #333;
+  text-align: center;
+}
+
+/* CSS FOR CONTACT SECTION */
+#contact {
+  padding: 20px;
+  background-color: #FFF;
+  color: #333;
+  text-align: center;
+}
+#contact a {
+  color: #1F7D53;
+  text-decoration: none;
+}
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* CSS FOR VIDEO CONTAINER */
+#video-container {
+  text-align: center;
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #F3F4F6;
+  border: 1px solid #DDD;
+}
+#video-container video {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border: 5px solid #1F7D53;
+}
+
+/* CSS FOR FEATURED EMPLOYERS SECTION */
+#featured-employers {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #EAF4E6; 
+  color: #333;
+}
+#featured-employers .employer {
+  border: 1px solid #DDD;
+  padding: 10px;
+  margin: 10px;
+  background-color: #FFF;
+  flex: 1;
+  max-width: 30%;
+  box-sizing: border-box;
+}
+#featured-employers .employer h4 {
+  margin: 0 0 5px 0;
+  color: #1F7D53;
+}
+#featured-employers .employer p {
+  margin: 5px 0;
+  color: #666;
+}
+
+/* Fade-in animation for the intro section */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+#intro h2 {
+  animation: fadeIn 2s ease-out;
+}
+
+/* Bounce effect for buttons */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-10px);
+  }
+  60% {
+      transform: translateY(-5px);
+  }
+}
+
+.job button {
+  animation: bounce 1s infinite;
+}
+
+/* Slide-in animation for navigation links */
+@keyframes slideIn {
+  0% {
+      transform: translateX(-100%);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
+#nav a {
+  animation: slideIn 0.5s ease-out;
+}
